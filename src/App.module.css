@@ -1,0 +1,16 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Banner {
+  display: flex;
+  position: absolute;
+  right: -500px;
+  align-items: center;
+  justify-content: right;
+}
+.App:hover .Banner {
+  transform: translate(-628px);
+  transition: transform 3s;
+}

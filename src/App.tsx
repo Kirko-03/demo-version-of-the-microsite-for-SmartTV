@@ -1,24 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import a from "./App.module.css"; //css модуль для стилизации App.tsx
+import ReactPlayer from "react-player"; //библиотека для взаимствования плеера с видео
+import { Banner } from "./items/Banner/Banner";//самодельный модуль баннера
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={a.App}>
+      <ReactPlayer
+        width={"1280px"}
+        height={"720px"} 
+        className={"App"}
+        url={"https://youtu.be/M7FIvfx5J10"}
+      />
+      <div className={a.Banner}>
+        <Banner />
+      </div>
     </div>
   );
 }
