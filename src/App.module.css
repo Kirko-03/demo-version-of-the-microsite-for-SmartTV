@@ -2,15 +2,54 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background: gold;
+
 }
-.Banner {
+.promo{
+  display: flex;
+  padding-right: 5px;
+  text-align: right;
+  height: 110px;
+  width: 314px;
+  left: 926px;
+  top: 500px;
+  border-radius: 0px;
+  position: absolute;
+}
+.promo p{
+  margin-right:10px
+}
+.close{
+  height: 52px;
+  width: 88px;
+  left: 0px;
+  top: 52px;
+  border-radius: 0px;
+  position: absolute;
+  left: 91.56%;
+  right: 1.56%;
+  top: 2.78%;
+  bottom: 90%;
+  cursor: pointer;
+  font-weight: bold;
+  border: 2px solid #000000;
+  box-sizing: border-box;
+  }
+  .close:hover{
+    color:white;
+    background: black;
+  }
+  .Banner {
+  width: 251px;
+  height: 357px;
+  background: #86d3f4;
+  text-align: center;
   display: flex;
   position: absolute;
   right: -500px;
   align-items: center;
-  justify-content: right;
 }
 .App:hover .Banner {
-  transform: translate(-628px);
+  transform: translate(-500px);
   transition: transform 3s;
 }

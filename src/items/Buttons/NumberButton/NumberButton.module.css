@@ -1,0 +1,14 @@
+.numberButton{
+  height: 52px;
+  width: 88px;
+  left: 98px;
+  top: 0px;
+  border:rgb(14, 13, 13) 1px solid;
+  border-radius: 0px;
+  margin: 3px;
+  background: none;  
+}
+.numberButton:hover{
+  color:white;
+  background: rgb(14, 13, 13);
+}
