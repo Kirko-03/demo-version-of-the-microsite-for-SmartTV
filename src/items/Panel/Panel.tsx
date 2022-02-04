@@ -22,8 +22,13 @@ export const Panel = () => {
     "_",
     "_",
   ]);
+  const [error,setError] = useState<boolean>(false)
   const [consent, setConsent] = useState<boolean>(false);
   const [success, setSuccess] = useState<boolean>(false);
+  function validationNumber(){
+    arrayNumber.find(str=>str==='_')!=='_'?setSuccess(true):setError(true)
+    
+  }
   return (
     <div className={p.Panel}>
       {success ? (
@@ -36,7 +41,7 @@ export const Panel = () => {
           <span className={p.header}>
             Введите ваш номер мобильного телефона
           </span>
-          <Number arrayNumber={arrayNumber}/>
+          <Number error={error} arrayNumber={arrayNumber}/>
           <span className={p.subText}>
             и с Вами свяжется наш менеждер для дальнейшей консультации
           </span>
@@ -47,13 +52,13 @@ export const Panel = () => {
                 ✔
               </div>
             ) : (
-              <div onClick={() => setConsent(true)} className={p.emptySquare} />
+              <div onClick={() => setConsent(true)} className={error?p.emptySquare:p.square} />
             )}
             <p className={p.consentText}>
               Согласие на обработку {<br />}персональных данных
             </p>
           </div>
-          <button onClick={() => setSuccess(true)} className={p.verification}>
+          <button onClick={() => validationNumber()} className={p.verification}>
             Подтвердить номер
           </button>
         </>

@@ -1,5 +1,5 @@
-.telNumber{
-   
+.telNumber,.errorTN{
+
 font-family: Roboto;
 font-size: 32px;
 font-style: normal;
@@ -8,4 +8,7 @@ line-height: 38px;
 letter-spacing: 0em;
 text-align: left;
 
+}
+.errorTN{
+    border-bottom: red 3px solid;
 }
